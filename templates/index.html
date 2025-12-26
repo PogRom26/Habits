@@ -1,0 +1,125 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Habit Tracker API</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 10px;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+        .endpoint {
+            background: #f8f9fa;
+            border-left: 4px solid #667eea;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 4px;
+        }
+        .method {
+            display: inline-block;
+            padding: 3px 8px;
+            border-radius: 3px;
+            font-weight: bold;
+            margin-right: 10px;
+            font-size: 0.9em;
+        }
+        .get { background: #61affe; color: white; }
+        .post { background: #49cc90; color: white; }
+        .put { background: #fca130; color: white; }
+        .delete { background: #f93e3e; color: white; }
+        .btn {
+            display: inline-block;
+            background: #667eea;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 5px;
+            transition: background 0.3s;
+        }
+        .btn:hover {
+            background: #5a67d8;
+        }
+        .btn-swagger { background: #85ea2d; }
+        .btn-redoc { background: #764ba2; }
+        .btn-admin { background: #f56565; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🚀 Habit Tracker API</h1>
+        <p>API для трекера привычек по книге "Атомные привычки" Джеймса Клира</p>
+    </div>
+
+    <div class="content">
+        <h2>📚 О проекте</h2>
+        <p>Это бэкенд-часть SPA веб-приложения для отслеживания полезных привычек.
+           Проект реализует все принципы из книги "Атомные привычки".</p>
+
+        <h2>🔗 Основные эндпоинты</h2>
+
+        <div class="endpoint">
+            <span class="method post">POST</span>
+            <strong>/api/users/register/</strong> - Регистрация пользователя
+        </div>
+
+        <div class="endpoint">
+            <span class="method post">POST</span>
+            <strong>/api/users/login/</strong> - Авторизация (получение JWT токена)
+        </div>
+
+        <div class="endpoint">
+            <span class="method get">GET</span>
+            <strong>/api/habits/</strong> - Список привычек текущего пользователя
+        </div>
+
+        <div class="endpoint">
+            <span class="method get">GET</span>
+            <strong>/api/habits/public/</strong> - Список публичных привычек
+        </div>
+
+        <div class="endpoint">
+            <span class="method post">POST</span>
+            <strong>/api/habits/</strong> - Создание новой привычки
+        </div>
+
+        <div class="endpoint">
+            <span class="method post">POST</span>
+            <strong>/api/users/connect-telegram/</strong> - Подключение Telegram
+        </div>
+
+        <h2>📖 Документация</h2>
+        <p>Полная документация API доступна в следующих форматах:</p>
+
+        <div style="margin: 20px 0;">
+            <a href="/swagger/" class="btn btn-swagger">📚 Swagger UI</a>
+            <a href="/redoc/" class="btn btn-redoc">📖 ReDoc</a>
+            <a href="/admin/" class="btn btn-admin">⚙️ Админ-панель</a>
+        </div>
+
+        <h2>🛠 Технологии</h2>
+        <ul>
+            <li><strong>Django REST Framework</strong> - API</li>
+            <li><strong>JWT Authentication</strong> - Аутентификация</li>
+            <li><strong>Celery</strong> - Отложенные задачи</li>
+            <li><strong>Telegram Bot API</strong> - Уведомления</li>
+            <li><strong>PostgreSQL/SQLite</strong> - База данных</li>
+        </ul>
+
+                </div>
+</body>
+</html>
